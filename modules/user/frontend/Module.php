@@ -11,7 +11,9 @@ class Module extends \yii\base\Module
            'class' => 'modules\user\common\controllers\AuthController'
         ],
     ];
-
+    public $layout = '//blank';
+    public $successFlash = 'ثبت نام با موفقیت انجام شد.';
+    public $successRedirectPath = ['/'];
     public function init()
     {
         parent::init();
