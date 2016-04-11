@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4a8d408960c330387079bf9ffebea87b",
-    "content-hash": "a5205d47ad834496abb716357a44811f",
+    "hash": "bec95ac35b8ec45ba351ecc1b0988a50",
+    "content-hash": "553a04accf8c8c5d432d6002f0126fb2",
     "packages": [
         {
             "name": "2amigos/yii2-ckeditor-widget",
@@ -133,6 +133,71 @@
             "time": "2015-03-20 18:56:41"
         },
         {
+            "name": "2amigos/yii2-taggable-behavior",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/yii2-taggable-behavior.git",
+                "reference": "15480c08e24858a6abea0739bf0fb9867038b294"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/2amigos/yii2-taggable-behavior/zipball/15480c08e24858a6abea0739bf0fb9867038b294",
+                "reference": "15480c08e24858a6abea0739bf0fb9867038b294",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "require-dev": {
+                "phpunit/dbunit": "~1.0",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                },
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "dosamigos\\taggable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "2amigOS! Consulting Group",
+                    "email": "hola@2amigos.us",
+                    "homepage": "http://2amigos.us",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Alexander Kochetov",
+                    "email": "creocoder@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The taggable behavior for the Yii framework",
+            "homepage": "https://github.com/2amigos/yii2-taggable-behavior",
+            "keywords": [
+                "2amigos",
+                "Behavior",
+                "tags",
+                "yii",
+                "yii 2",
+                "yii2"
+            ],
+            "time": "2015-04-30 22:16:31"
+        },
+        {
             "name": "ahb360/kalpok",
             "version": "dev-master",
             "source": {
@@ -166,7 +231,7 @@
                 "yii2"
             ],
             "support": {
-                "source": "https://github.com/ahb360/kalpok/tree/develop",
+                "source": "https://github.com/ahb360/kalpok/tree/master",
                 "issues": "https://github.com/ahb360/kalpok/issues"
             },
             "time": "2015-11-23 10:40:30"
