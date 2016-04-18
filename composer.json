@@ -15,7 +15,8 @@
         "2amigos/yii2-selectize-widget" : "*",
         "creocoder/yii2-nested-sets": "0.9.*",
         "ahb360/kalpok":"dev-master",
-        "2amigos/yii2-taggable-behavior": "~1.0"
+        "2amigos/yii2-taggable-behavior": "~1.0",
+        "yiisoft/yii2-elasticsearch": "^2.0"
     },
     "repositories": [
         {

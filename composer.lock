@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bec95ac35b8ec45ba351ecc1b0988a50",
-    "content-hash": "553a04accf8c8c5d432d6002f0126fb2",
+    "hash": "0badbae1cc03b278d6bd0c97d3104368",
+    "content-hash": "b6b882e8213656254a0b36b65a5b8f5d",
     "packages": [
         {
             "name": "2amigos/yii2-ckeditor-widget",
@@ -1058,6 +1058,55 @@
                 "yii2"
             ],
             "time": "2015-03-01 06:22:44"
+        },
+        {
+            "name": "yiisoft/yii2-elasticsearch",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-elasticsearch.git",
+                "reference": "c752e9ef2eb0bf6807f6b3a4fadc885f6f7fef59"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-elasticsearch/zipball/c752e9ef2eb0bf6807f6b3a4fadc885f6f7fef59",
+                "reference": "c752e9ef2eb0bf6807f6b3a4fadc885f6f7fef59",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\elasticsearch\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Carsten Brandt",
+                    "email": "mail@cebe.cc"
+                }
+            ],
+            "description": "Elasticsearch integration and ActiveRecord for the Yii framework",
+            "keywords": [
+                "active-record",
+                "elasticsearch",
+                "fulltext",
+                "search",
+                "yii2"
+            ],
+            "time": "2016-03-17 04:45:15"
         },
         {
             "name": "yiisoft/yii2-imagine",
