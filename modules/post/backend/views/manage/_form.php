@@ -111,8 +111,9 @@ $backLink = $model->isNewRecord ? ['index'] : ['view', 'id' => $model->id];
                 'title' => 'دسته‌ها'
             ]) ?>
             <?=  $form->field($model, 'categories')->widget(Select2::classname(), [
-                    'data' => $model->getAllCategories(),
-                    'options' => ['placeholder' => 'دسته های مورد نظر را انتخاب کنید', 'multiple' => true,'dir' => 'rtl'],
+                    'name' => 'categories',
+                    'data' => $model->getAllCategoriesTitle(),
+                    'options' => ['placeholder' => 'دسته های مورد نظر را انتخاب کنید', 'multiple' => true],
                     'toggleAllSettings' => [
                         'selectLabel' => '<i class="glyphicon glyphicon-ok-circle"></i> انتخاب همه',
                         'unselectLabel' => '<i class="glyphicon glyphicon-remove-circle"></i> عدم انتخاب همه',
@@ -120,7 +121,7 @@ $backLink = $model->isNewRecord ? ['index'] : ['view', 'id' => $model->id];
                         'unselectOptions' => ['class' => 'text-danger'],
                     ],
                     'pluginOptions' => [
-                        'tags' => true,
+                        'language' => 'fa',
                         'tokenSeparators' => [',', ' '],
                         'maximumInputLength' => 10,
                     ],

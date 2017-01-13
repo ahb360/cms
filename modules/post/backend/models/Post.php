@@ -89,12 +89,12 @@ class Post extends \yii\db\ActiveRecord
         return $this->hasMany(Category::className(), ['id' => 'categoryId'])->viaTable('post_category_relation', ['postId' => 'id']);
     }
 
-    public function getAllCategories()
+    public function getAllCategoriesTitle()
     {
         $categories = Category::find()->all();
         $titles = [];
         foreach ($categories as $category) {
-            $titles[] = $category->title;   
+            $titles[$category->title] = $category->title;   
         }
         return $titles;
     }
