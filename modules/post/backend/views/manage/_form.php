@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kalpok\helpers\Utility;
+use kartik\select2\Select2;
 use themes\admin360\widgets\Panel;
 use themes\admin360\widgets\Button;
 use kalpok\i18n\widgets\LanguageSelect;
@@ -109,26 +110,22 @@ $backLink = $model->isNewRecord ? ['index'] : ['view', 'id' => $model->id];
             <?php Panel::begin([
                 'title' => 'دسته‌ها'
             ]) ?>
-                <?= $form->field($model, 'categories')->widget(
-                        SelectizeTextInput::className(),
-                        [
-                            'options' => ['class' => 'form-control'],
-                            'clientOptions' => [
-                                'create' => false,
-                                'options' => Utility::makeReadyForSelectize(
-                                    Category::find()->all(),
-                                    'title',
-                                    'title'
-                                ),
-                                'items' => $model->getCategoriesAsArray(),
-                                'valueField' => 'title',
-                                'labelField' => 'title',
-                                'searchField' => ['title'],
-                                'plugins' => ['remove_button'],
-                            ],
-                        ]
-                    )->label('');
-                ?>
+            <?=  $form->field($model, 'categories')->widget(Select2::classname(), [
+                    'data' => $model->getAllCategories(),
+                    'options' => ['placeholder' => 'دسته های مورد نظر را انتخاب کنید', 'multiple' => true,'dir' => 'rtl'],
+                    'toggleAllSettings' => [
+                        'selectLabel' => '<i class="glyphicon glyphicon-ok-circle"></i> انتخاب همه',
+                        'unselectLabel' => '<i class="glyphicon glyphicon-remove-circle"></i> عدم انتخاب همه',
+                        'selectOptions' => ['class' => 'text-success'],
+                        'unselectOptions' => ['class' => 'text-danger'],
+                    ],
+                    'pluginOptions' => [
+                        'tags' => true,
+                        'tokenSeparators' => [',', ' '],
+                        'maximumInputLength' => 10,
+                    ],
+                ])->label('');
+            ?>
             <?php Panel::end() ?>
             <?php Panel::begin([
                 'title' => 'ویژگی های نوشته'
